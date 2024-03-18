@@ -18,4 +18,6 @@ joint = hist_x[:, np.newaxis] * hist_y[np.newaxis, :]
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 ax.plot_surface(X, Y, joint)
+plt.xlabel('x')
+plt.ylabel('y')
 plt.show()
