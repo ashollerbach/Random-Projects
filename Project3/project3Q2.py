@@ -10,5 +10,5 @@ y = 3*x + n
 
 fig, ax = plt.subplots()
 
-plt.hist2d(x, y, bins=(50,50), cmap=plt.cm.binary)
+plt.hist2d(x, y, bins=(50,50))
 plt.show()
