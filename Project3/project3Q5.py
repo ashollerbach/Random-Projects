@@ -8,10 +8,14 @@ n = rand.normal(0,1,N)
 
 y = 3*x + n
 
-hist_x, bin_xedges = np.histogram(x, bins=50)
+#store the shape of the histogram as well as where each bins ends
+hist_x, bin_xedges = np.histogram(x, bins=50) 
 hist_y, bin_yedges = np.histogram(y, bins=50)
 
+#make an evenly spaced mesh grid
 X, Y = np.meshgrid(bin_xedges[:-1], bin_yedges[:-1])
+#multiply the two arrays together to make pairs
+#have to create new axis so that we're not doing dot product
 joint = hist_x[:, np.newaxis] * hist_y[np.newaxis, :]
 
 fig = plt.figure()
